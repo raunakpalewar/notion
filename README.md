@@ -1,7 +1,7 @@
 # Readme
 
 
-# Assignment 1 (Notion Clone)
+## Assignment 1 (Notion Clone)
 
 This project is a clone of Notion, a note-taking and collaboration application.
 
