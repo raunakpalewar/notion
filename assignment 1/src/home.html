@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notion Clone</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
+  <style>
+    .sidebar {
+      height: 100%;
+      width: 18%;
+      transition: width 0.3s ease;
+      
+      
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      overflow-y: auto;
+      background-color: #f9fafb;
+      border-right: 1px solid #ddd;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li a {
+      display: block;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+      display: flex;
+      align-items: center;
+    }
+    .sidebar li a:hover {
+      background-color: #edf2f7;
+    }
+    .sidebar .section-title {
+      font-weight: bold;
+      padding: 10px 20px;
+      color: #555;
+    }
+    .sidebar .section-item {
+      padding-left: 30px;
+    }
+    .main {
+        width: 82%;
+    }
+
+  </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+  <div class="flex">
+    <aside class="sidebar">
+      <ul>
+        <li><span class="section-title"></span></li>
+        <li><a href="#" class="section-item"><i class="fas fa-user mr-2"></i>User Name</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-search mr-2"></i><input type="text" placeholder="Search..." class="bg-gray-300 p-2 rounded"></a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-cog mr-2"></i>Settings & Members</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-plus mr-2"></i>New Page</a></li>
+      </ul>
+        <br>
+   
+      <ul class="mt-4">
+        <li><a href="#" class="section-item"><i class="fas fa-book text-blue-500 mr-2"></i>Getting Started</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-sticky-note text-red-500 mr-2"></i>Quick Note</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-home text-green-500 mr-2"></i>Personal Home</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-tasks text-purple-500 mr-2"></i>Task List</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-book text-yellow-500 mr-2"></i>Journal</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-book-reader text-indigo-500 mr-2"></i>Reading List</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-tasks text-pink-500 mr-2"></i>Task List</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-file text-teal-500 mr-2"></i>Add a Page</a></li>
+
+      </ul><br>
+
+
+      <ul class="mt-4">
+        <li><a href="#" class="section-item"><i class="fas fa-users mr-2"></i>Create a Team Space</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-file-alt mr-2"></i>Templates</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-file-import mr-2"></i>Import</a></li>
+        <li><a href="#" class="section-item"><i class="fas fa-trash-alt mr-2"></i>Trash</a></li>
+
+      </ul> <br>
+    </aside>
+
+    
+    <main class="main p-4">
+
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-semibold">Getting Started</h2>
+          <div class="flex items-center">
+            <a href="#" class="mr-4 flex items-center text-gray-600 hover:text-gray-800">
+              <i class="fas fa-share mr-1"></i>
+              Share
+            </a>
+            <a href="#" class="mr-4 flex items-center text-gray-600 hover:text-gray-800">
+              <i class="fas fa-comment mr-1"></i>
+              Comment
+            </a>
+            <a href="#" class="mr-4 flex items-center text-gray-600 hover:text-gray-800">
+              <i class="fas fa-clock mr-1"></i>
+              Clock
+            </a>
+            <a href="#" class="mr-4 flex items-center text-gray-600 hover:text-gray-800">
+              <i class="fas fa-star mr-1"></i>
+              Star
+            </a>
+            <a href="#" class="flex items-center text-gray-600 hover:text-gray-800">
+              <i class="fas fa-ellipsis-h mr-1"></i>
+              More
+            </a>
+          </div>
+        </div>
+        <div class="p-9 ml-auto">
+            <section class="bg-white rounded-lg shadow p-7 mb-4">
+              <div class="p-8">
+                <h1 class="text-4xl font-bold"># Getting Started</h1>
+                <p class="text-lg">👋 Welcome to Notion!</p>
+                <p class="text-lg">Here are the basics:</p>
+                <br><br><br>
+          
+                <div class="text-left">
+                  <input type="checkbox" id="clickAnywhere" name="clickAnywhere">
+                  <label for="clickAnywhere">Click anywhere and just start typing</label><br>
+          
+                  <input type="checkbox" id="seeContent" name="seeContent">
+                  <label for="seeContent">Hit `/` to see all the types of content you can add - headers, videos, sub pages, etc.</label>
+                  <ul class="list-disc ml-8">
+                    <li><a href="https://www.notion.so/Example-sub-page-a28bbe11fc4549f193cc55dbae85e895?pvs=21" target="_blank">Example sub page</a></li>
+                  </ul>
+          
+                  <input type="checkbox" id="highlightText" name="highlightText">
+                  <label for="highlightText">Highlight any text, and use the menu that pops up to style your writing however you like</label><br>
+          
+                  <input type="checkbox" id="moveLine" name="moveLine">
+                  <label for="moveLine">See the ⋮⋮ to the left of this checkbox on hover? Click and drag to move this line</label><br>
+          
+                  <input type="checkbox" id="newPage" name="newPage">
+                  <label for="newPage">Click the + New Page button at the bottom of your sidebar to add a new page</label><br>
+          
+                  <input type="checkbox" id="templates" name="templates">
+                  <label for="templates">Click Templates in your sidebar to get started with pre-built pages</label><br>
+          
+                  <p>
+                    <br>
+                    
+                    <div>
+                        <button id="toggleButton" class="flex items-center text-lg focus:outline-none">
+                            <i id="toggleIcon" class="fas fa-hand-point-right"></i>
+                          <span class="mr-2 p-4" >This is a toggle block. Click the little triangle to see more useful tips!</span>
+                          
+                        </button>
+                        <div id="toggleContent" class="hidden">
+                          <ul class="list-disc ml-8 text-lg">
+                            <li><a href="https://www.notion.so/181e961aeb5c4ee6915307c0dfd5156d?pvs=21" target="_blank">Template Gallery</a>: More templates built by the Notion community</li>
+                            <li><a href="https://www.notion.so/e040febf70a94950b8620e6f00005004?pvs=21" target="_blank">Help & Support</a>: Guides and FAQs for everything in Notion</li>
+                            <li>Stay organized with your sidebar and nested pages:</li>
+                          </ul>
+                        </div>
+                    <br>
+                    <div class="text-center">
+                        <div >
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                          </div> 
+                          <br>
+                          <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                          </div>
+                          <br>
+                          <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                          </div>
+                    </div>
+                  </p>
+                </div>
+          
+                <p>👉<strong>Have a question?</strong> Click the <code>?</code> at the bottom right for more guides, or to send us a message.</p>
+          
+                <p><a href="https://www.notion.so/String-cb6630d1886e4ab89f0b00396088d6b3?pvs=21" target="_blank">String</a></p>
+              </div>
+            </section>
+          </div>
+          
+      </main>
+  </div>
+  
+  <script>
+    const toggleButton = document.getElementById('toggleButton');
+    const toggleIcon = document.getElementById('toggleIcon');
+    const toggleContent = document.getElementById('toggleContent');
+  
+    toggleButton.addEventListener('click', () => {
+      toggleContent.classList.toggle('hidden');
+      if (toggleContent.classList.contains('hidden')) {
+        toggleIcon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+      } else {
+        toggleIcon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+      }
+    });  
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+
+</script>
+</body>
+</html>
